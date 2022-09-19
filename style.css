@@ -1,0 +1,95 @@
+body{
+    margin: 0px;
+    font-size: 20px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+header{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    padding: 10px;
+    font-weight: bold;
+}
+nav{
+    display: flex;
+}
+.nav_item{
+    display: block;
+    padding: 10px;
+}
+/* hamburger menu for mobile */
+.nav_icon{
+    display: none;
+}
+.welcome{
+    height: 300px;
+    background-color: #ddcfc2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem; /* double-sizing by root */ 
+    font-weight: bold;
+}
+.content{
+    width: 1200px;
+    margin: auto; margin-top: 15px;
+}
+.content_top{
+    display: flex;
+    flex-wrap: wrap; /* to multiple lines */
+    justify-content: center;
+}
+.content_bottom{
+    display: flex;
+    flex-wrap: wrap; /* to multiple lines */
+    justify-content: center;
+}
+.top_box{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    width: 48%; margin: 1%;
+    background-color: #ddcfc2;
+    overflow: hidden; /* hid the element which out of container */
+}
+.bottom_box{
+    width: 23%; margin: 1%;
+    background-color: #ddcfc2;
+    text-align: center;
+}
+.box_title{
+    margin: 10px;
+}
+
+/* CSS media query */
+/* 600px < size <= 1200px */ 
+@media screen and (max-width: 1200px){
+    .content{
+        width: 90%;
+    }
+    .bottom_box{
+        width: 48%; margin: 1%;
+    }
+}
+/* size <= 600px */ 
+@media screen and (max-width: 600px){
+    .content{
+        width: 90%;
+    }
+    .top_box{
+        width: 98%; margin: 1%;
+    }
+    .bottom_box{
+        width: 98%; margin: 1%;
+    }
+    /* change to hamburger menu */
+    .nav_icon{
+        display: block;
+    }
+    .nav_item{
+        display: none;
+    }
+
+}
