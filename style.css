@@ -12,11 +12,23 @@ header{
     padding: 10px;
     font-weight: bold;
 }
-nav{
+.navbar{
     display: flex;
 }
-.nav_item{
+.navbar_mobile--open{
     display: block;
+    position: fixed;
+    z-index: 1000;
+    top: 0px; right: 0px;
+    width: 50%; height: 100%;
+    background-color: #ffffff;
+    box-shadow: -3px 0px 2px rgba(0, 0, 0, 0.25);
+}
+.navbar_mobile--close{
+    display: none;
+}
+.nav_item{
+    text-align: center;
     padding: 10px;
 }
 /* hamburger menu for mobile */
@@ -56,6 +68,7 @@ nav{
 }
 .promotion{
     margin: 10px;
+
 }
 .bottom_box{
     position: relative;
@@ -68,6 +81,10 @@ nav{
 .star_icon{
     position: absolute;
     top: 10px; right: 10px;
+    opacity: 0.5;
+}
+.star_icon:hover{
+    opacity: 1;
 }
 .box_title{
     position: absolute;
@@ -105,7 +122,7 @@ nav{
     .nav_icon{
         display: block;
     }
-    .nav_item{
+    .navbar{
         display: none;
     }
 

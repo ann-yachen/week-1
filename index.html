@@ -11,17 +11,19 @@
     <header>
         <div class="logo">My Website</div>
         <nav>
-            <div class="nav_icon"><img src="icon_burger.png" /></div>
-            <div class="nav_item">Item1</div>
-            <div class="nav_item">Item2</div>
-            <div class="nav_item">Item3</div>
-            <div class="nav_item">Item4</div>
+            <div class="navbar" id="menu">
+                <div class="nav_item">Item1</div>
+                <div class="nav_item">Item2</div>
+                <div class="nav_item">Item3</div>
+                <div class="nav_item">Item4</div>
+            </div>
+            <div class="nav_icon" id="bgr"><img src="icon_burger.png" /></div>
         </nav>  
     </header>
-    <div class="welcome">
-        <div>Welcome to MyHome</div>
-    </div>
     <main>
+        <div class="welcome">
+            <div>Welcome to MyHome</div>
+        </div>
         <div class="content">
             <div class="content_top">
                 <div class="top_box">
@@ -35,39 +37,54 @@
             </div>
             <div class="content_bottom">
                 <div class="bottom_box">
-                    <img class="star_icon" src="icon_star.png" />
+                    <img class="star_icon" src="icon_star.png" onmouseover="this.style.opacity='100%';" onmouseout="this.style.opacity='50%';" />
                     <div class="box_title">Title 1</div>
                 </div>
                 <div class="bottom_box">
-                    <img class="star_icon" src="icon_star.png" />
+                    <img class="star_icon" src="icon_star.png" onmouseover="this.style.opacity='100%';" onmouseout="this.style.opacity='50%';" />
                     <div class="box_title">Title 2</div>
                 </div>
                 <div class="bottom_box">
-                    <img class="star_icon" src="icon_star.png" />
+                    <img class="star_icon" src="icon_star.png" onmouseover="this.style.opacity='100%';" onmouseout="this.style.opacity='50%';" />
                     <div class="box_title">Title 3</div>
                 </div>
                 <div class="bottom_box">
-                    <img class="star_icon" src="icon_star.png" />
+                    <img class="star_icon" src="icon_star.png" onmouseover="this.style.opacity='100%';" onmouseout="this.style.opacity='50%';" />
                     <div class="box_title">Title 4</div>
                 </div>
                 <div class="bottom_box">
-                    <img class="star_icon" src="icon_star.png" />
+                    <img class="star_icon" src="icon_star.png" onmouseover="this.style.opacity='100%';" onmouseout="this.style.opacity='50%';" />
                     <div class="box_title">Title 5</div>
                 </div>
                 <div class="bottom_box">
-                    <img class="star_icon" src="icon_star.png" />
+                    <img class="star_icon" src="icon_star.png" onmouseover="this.style.opacity='100%';" onmouseout="this.style.opacity='50%';" />
                     <div class="box_title">Title 6</div>
                 </div>
                 <div class="bottom_box">
-                    <img class="star_icon" src="icon_star.png" />
+                    <img class="star_icon" src="icon_star.png" onmouseover="this.style.opacity='100%';" onmouseout="this.style.opacity='50%';" />
                     <div class="box_title">Title 7</div>
                 </div>
                 <div class="bottom_box">
-                    <img class="star_icon" src="icon_star.png" />
+                    <img class="star_icon" src="icon_star.png" onmouseover="this.style.opacity='100%';" onmouseout="this.style.opacity='50%';" />
                     <div class="box_title">Title 8</div>
                 </div>
             </div>
         </div>
-    </main> 
+    </main>
+    <script>
+        if(window.screen.width<=600){
+            let bgr=document.querySelector("#bgr");
+            let menu=document.querySelector("#menu");
+            function menuOpen(){
+                menu.className="navbar_mobile--open";
+                menu.addEventListener("mouseover", menuOpen);
+            }
+            function menuClose(){
+                menu.className="navbar_mobile--close";
+            }
+            bgr.addEventListener("mouseover", menuOpen);
+            menu.addEventListener("mouseout", menuClose);
+        }
+    </script>
 </body>
 </html>
