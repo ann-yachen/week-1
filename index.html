@@ -11,8 +11,9 @@
     <header>
         <div class="logo">My Website</div>
         <nav>
-            <div class="navbar" id="menu">
-                <div class="nav_item">Item1</div>
+            <div class="bgr_menu" id="bgr_menu"></div>
+            <div class="navbar">
+                <div class="nav_item"><a href="https://www.google.com/" target="_blank">Item1</a></div>
                 <div class="nav_item">Item2</div>
                 <div class="nav_item">Item3</div>
                 <div class="nav_item">Item4</div>
@@ -72,19 +73,19 @@
         </div>
     </main>
     <script>
-        if(window.screen.width<=600){
-            let bgr=document.querySelector("#bgr");
-            let menu=document.querySelector("#menu");
-            function menuOpen(){
-                menu.className="navbar_mobile--open";
-                menu.addEventListener("mouseover", menuOpen);
-            }
-            function menuClose(){
-                menu.className="navbar_mobile--close";
-            }
-            bgr.addEventListener("mouseover", menuOpen);
-            menu.addEventListener("mouseout", menuClose);
+        let bgr=document.querySelector("#bgr");
+        let bgr_menu=document.querySelector("#bgr_menu"); // for clicking out of navbar
+        let navbar=document.querySelector(".navbar");
+        function menuOpen(){
+            bgr_menu.style.display="block";
+            navbar.className="navbar_mobile--open";
         }
+        function menuClose(){
+            bgr_menu.style.display="none";
+            navbar.className="navbar_mobile--close";
+        }
+        bgr.addEventListener("mousedown", menuOpen); // open navbar
+        bgr_menu.addEventListener("mousedown", menuClose); // close navbar when clicking at other region
     </script>
 </body>
 </html>
